@@ -29,6 +29,7 @@ class ResidentialsController < ApplicationController
   # POST /residentials.json
   def create
     @residential = Residential.new(residential_params)
+    @residential.user = current_user
 
     respond_to do |format|
       if @residential.save
