@@ -1,4 +1,5 @@
 ActiveAdmin.register Residential do
+  permit_params :status, :contract
 
 
   # See permitted parameters documentation:
