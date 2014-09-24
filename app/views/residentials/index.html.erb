@@ -1,0 +1,31 @@
+<h1>Listing residentials</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Status</th>
+      <th>Contract</th>
+      <th>Product</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @residentials.each do |residential| %>
+      <tr>
+        <td><%= residential.user %></td>
+        <td><%= residential.status %></td>
+        <td><%= residential.contract %></td>
+        <td><%= residential.product %></td>
+        <td><%= link_to 'Show', residential %></td>
+        <td><%= link_to 'Edit', edit_residential_path(residential) %></td>
+        <td><%= link_to 'Destroy', residential, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Residential', new_residential_path %>

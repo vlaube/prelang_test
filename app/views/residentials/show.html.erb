@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @residential.user %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @residential.status %>
+</p>
+
+<p>
+  <strong>Contract:</strong>
+  <%= @residential.contract %>
+</p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @residential.product %>
+</p>
+
+<%= link_to 'Edit', edit_residential_path(@residential) %> |
+<%= link_to 'Back', residentials_path %>
