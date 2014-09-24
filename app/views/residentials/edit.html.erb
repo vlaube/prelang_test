@@ -1,6 +1,5 @@
-<h1>Editing residential</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @residential %> |
-<%= link_to 'Back', residentials_path %>
+<%- model_class = Residential -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => Residential %></h1>
+</div>
+<%= render :partial => 'form' %>
